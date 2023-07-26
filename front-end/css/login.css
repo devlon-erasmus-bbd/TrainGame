@@ -1,0 +1,79 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  width: 40%;
+  margin-top: 7rem;
+}
+img {
+  width: 15rem;
+  height: 20rem;
+}
+aside {
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2d2a2a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: #000000;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #fff;
+  }
+  section {
+    display: none;
+  }
+  main {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 80%;
+    height: 70%;
+  }
+  aside {
+    margin: auto;
+  }
+}

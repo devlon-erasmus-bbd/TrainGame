@@ -30,6 +30,7 @@ internal class Program
         });
 
         var app = builder.Build();
+        app.MapGet("/", () => "Hello");
 
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
@@ -38,7 +39,7 @@ internal class Program
             app.UseSwaggerUI();
         }
 
-        app.UseHttpsRedirection();
+        // app.UseHttpsRedirection();
 
         app.UseAuthentication();
         app.UseAuthorization();

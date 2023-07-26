@@ -1,0 +1,86 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <link rel="stylesheet" type="text/css" href="./css/game.css" />
+    <script src="./js/game.js"></script>
+    <script src="./js/navigation.js"></script>
+  </head>
+  <body onload="NextQuestion(0)">
+    <main>
+      <!-- creating a modal for when quiz ends -->
+      <section class="modal-container" id="score-modal">
+        <section class="modal-content-container">
+          <h1>Congratulations, Quiz Completed.</h1>
+
+          <article class="grade-details">
+            <p>Right Answers : <span id="right-answers"></span></p>
+          </article>
+
+          <article class="modal-button-container">
+            <button onclick="closeScoreModal()">Continue</button>
+          </article>
+        </section>
+      </section>
+
+      <section class="game-quiz-container">
+        <article class="game-details-container">
+          <h1>Score : <span id="player-score"></span></h1>
+        </article>
+
+        <article class="game-question-container">
+          <h1 id="display-question"></h1>
+        </article>
+
+        <article class="game-options-container">
+          <article class="modal-container" id="option-modal">
+            <article class="modal-content-container">
+              <h1>Please Pick An Option</h1>
+
+              <article class="modal-button-container">
+                <button onclick="closeOptionModal()">Continue</button>
+              </article>
+            </article>
+          </article>
+
+          <article>
+            <input
+              type="radio"
+              id="option-one"
+              name="option"
+              class="radio"
+              value="optionA"
+            />
+            <label
+              for="option-one"
+              class="option"
+              id="option-one-label"
+            ></label>
+          </article>
+
+          <article>
+            <input
+              type="radio"
+              id="option-two"
+              name="option"
+              class="radio"
+              value="optionB"
+            />
+            <label
+              for="option-two"
+              class="option"
+              id="option-two-label"
+            ></label>
+          </article>
+        </article>
+
+        <article class="next-button-container">
+          <button onclick="redirectButton('home')">Quit Game</button>
+          <button onclick="handleNextQuestion()">Next Question</button>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
